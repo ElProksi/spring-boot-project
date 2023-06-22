@@ -10,7 +10,7 @@ VALUES
 -- password in plaintext: "password"
 INSERT INTO USER (user_id, password, email, username, name, last_name, active)
 VALUES
-  (2, '$2a$06$OAPObzhRdRXBCbk7Hj/ot.jY3zPwR8n7/mfLtKIgTzdJa4.6TwsIm', 'qwvqwe@gmail.com', 'abobba', 'Sanya', 'Petrov', 1);
+  (2, '$2a$06$OAPObzhRdRXBCbk7Hj/ot.jY3zPwR8n7/mfLtKIgTzdJa4.6TwsIm', 'qwvqwe@gmail.com', 'Rast', 'Sanya', 'Petrov', 1);
 -- password in plaintext: "password"
 INSERT INTO USER (user_id, password, email, username, name, last_name, active)
 VALUES (3, '$2a$06$OAPObzhRdRXBCbk7Hj/ot.jY3zPwR8n7/mfLtKIgTzdJa4.6TwsIm', 'vewevv@mail.com', 'balabolka', 'ewewew', 'uuutut', 1);
@@ -33,79 +33,67 @@ VALUES (3, 2);
 
 -- Posts
 INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (1, 1, 'Title 1',
-       '"Мы говорили о том, как Spring Security помогает защитить веб-приложения на платформе Spring от различных видов атак. Мы также обсудили формат HAL, который упрощает работу с RESTful API. Если вы планируете создавать веб-приложение на Spring или использовать RESTful API, эти инструменты могут быть очень полезны."',
+VALUES (1, 1, 'Про путешествия',
+       '"Путешествия - это возможность узнать новые места и культуры, расширить свой кругозор и накопить неизгладимые впечатления. Каждое путешествие - это неповторимый опыт, который оставит в нашей памяти тысячи ярких картинок и эмоций.
+Путешествовать можно не только заграницу, но и по Родине. Россия - это огромная страна с множеством интересных мест и достопримечательностей. Так, например, вы можете отправиться на Байкал, древний город Великий Новгород, населенный пещерами город Уфа, или многие другие замечательные места.
+Интересные края, народные обычаи, невероятная природа и красивейшие города - этим можно заняться всю жизнь и никогда не надоест. Одно из самых прекрасных в путешествиях - это возможность общения с новыми людьми и друзьями по всему миру, что расширяет наше представление о культуре и обществе в целом.
+Незабываемые пейзажи, посещения музеев, парков цветов, заповедников, иногда необыкновенно красивых церквей и храмов, знакомства с современной культурой - вот всего лишь некоторые из тех граней путешествий, которым можно наслаждаться по полной программе. Главное, ехать в путешествие с максимумом положительных эмоций."',
         --         CURRENT_TIMESTAMP());
-        {ts '2016-10-19 11:10:13.247'});
+        {ts '2021-10-19 11:10:13.247'});
 INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (2, 1, 'Title 2',
-        '"Мы говорили о том, как Spring Security помогает защитить веб-приложения на платформе Spring от различных видов атак. Мы также обсудили формат HAL, который упрощает работу с RESTful API. Если вы планируете создавать веб-приложение на Spring или использовать RESTful API, эти инструменты могут быть очень полезны."',
+VALUES (2, 1, 'Открытие России: путешествия по стране',
+        '"Россия богата уникальной природой, культурой и историей. Каждый город скрывает в себе невероятный потенциал для туристического путешествия. Вы можете отправиться во Владивосток, совершить кругосветное путешествие на теплоходе, побывать на Байкале, взобраться на Эльбрус и еще множество других интересных мест. Туристы также могут насладиться разнообразным гастрономическим опытом и попробовать национальные блюда. Кроме того, Россия знаменита своими праздниками и фестивалями, которые собирают людей со всего мира. Путешествия по России – все, что нужно для удовлетворения любых вкусов и интересов."',
         --         CURRENT_TIMESTAMP());
-        {ts '2016-11-10 11:10:13.247'});
+        {ts '2022-11-10 11:10:13.247'});
 INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (3, 1, 'Title 3',
-        '"Мы говорили о том, как Spring Security помогает защитить веб-приложения на платформе Spring от различных видов атак. Мы также обсудили формат HAL, который упрощает работу с RESTful API. Если вы планируете создавать веб-приложение на Spring или использовать RESTful API, эти инструменты могут быть очень полезны."',
+VALUES (3, 1, 'Открытие Монголии: путешествие, открывающее новый мир',
+        '"Монголия - это удивительная страна, известная своими просторами и богатой культурой. Когда ты находишься там, то ощущаешь себя как будто забрался на крышу мира. Здесь вас окутает незабываемая атмосфера свободы и гармонии с природой. Вас ожидает неповторимый опыт путешествия на лошадях, путешествия в пустыни Гоби, посещение храмов и монастырей Буддистской культуры и знакомство с традиционной культурой народа. Монгольские люди живут в гармонии с природой, и время, проведенное с ними, оказывается незабываемым. Путешествие по Монголии - это открытие нового мира, который точно оставит неповторимые впечатления."',
         CURRENT_TIMESTAMP());
 INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (4, 1, 'Title 4',
-        '"Мы говорили о том, как Spring Security помогает защитить веб-приложения на платформе Spring от различных видов атак. Мы также обсудили формат HAL, который упрощает работу с RESTful API. Если вы планируете создавать веб-приложение на Spring или использовать RESTful API, эти инструменты могут быть очень полезны."',
+VALUES (4, 1, 'Италия: путешествие в страну искусства и кулинарии',
+        '"Италия всегда славилась своим богатством искусства, архитектуры, кулинарией и красотой природы. Милан, Флоренция, Рим, Венеция - каждый город Италии является настоящим произведением искусства. Каждый уголок этой замечательной страны уникален и обладает своими особенностями. Италия также славится своей кухней, где каждое блюдо - это настоящее произведение, созданное с заботой и любовью. Тур по винодельням в Тоскане, романтический ужин на пиццерии в Риме, дегустация лимончелло на Амальфитанском побережье - всё это необыкновенные кулинарные пробы Италии. Путешествие в Италию - это настоящая возможность окунуться в изумительную культуру и насладиться богатством кулинарии одновременно."',
         CURRENT_TIMESTAMP());
 INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (5, 1, 'Title 5',
-        '"Мы говорили о том, как Spring Security помогает защитить веб-приложения на платформе Spring от различных видов атак. Мы также обсудили формат HAL, который упрощает работу с RESTful API. Если вы планируете создавать веб-приложение на Spring или использовать RESTful API, эти инструменты могут быть очень полезны."',
+VALUES (5, 2, 'Почему поход в кино - это идеальный способ провести вечер',
+        '"Поход в кино - это прекрасный способ провести время с друзьями или с любимым человеком. Вы можете наслаждаться захватывающим сюжетом, забыв о повседневной суете и рутине. Большой экран, звуковые эффекты и особая атмосфера работы соединяются, чтобы создать незабываемый кинематографический опыт. Кроме того, это прекрасный способ отвлечься от повседневных проблем и расслабиться после долгой рабочей недели. Что касается выбора фильма, то здесь есть множество вариантов для каждого человека - от комедий до ужасов. Поход в кино - это прекрасное развлечение, которое никогда не подведет."',
         CURRENT_TIMESTAMP());
 INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (6, 1, 'Title 6',
-        '"Мы говорили о том, как Spring Security помогает защитить веб-приложения на платформе Spring от различных видов атак. Мы также обсудили формат HAL, который упрощает работу с RESTful API. Если вы планируете создавать веб-приложение на Spring или использовать RESTful API, эти инструменты могут быть очень полезны."',
+VALUES (6, 2, 'Как выбрать автомобиль',
+        '"Выбор автомобиля может быть сложным заданием, ведь существует множество разных марок и моделей авто. Но если считать, что вы выработали решение, что необходим автомобиль, то вам следует решить, для чего вам он нужен и найти марки авто, которые соответствуют вашим потребностям. Например, если вы живете в городе, то лучше выбрать машину компактного размера, а если вам нужен автомобиль для дальних поездок, то стоит рассмотреть более большой и комфортный автомобиль. Также следует учитывать бюджет и расходы на содержание машины. Помните, что правильный выбор автомобиля поможет сделать процесс вождения легким и комфортным."',
         CURRENT_TIMESTAMP());
 INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (7, 2, 'Title 7',
-        '"Мы говорили о том, как Spring Security помогает защитить веб-приложения на платформе Spring от различных видов атак. Мы также обсудили формат HAL, который упрощает работу с RESTful API. Если вы планируете создавать веб-приложение на Spring или использовать RESTful API, эти инструменты могут быть очень полезны."',
+VALUES (7, 2, 'Новый популярный гаджет в мире городских перемещений - самокат!',
+        '"Хей всем, сегодня я хочу поделиться с вами трендом городских перемещений - это самокат. Это прост в использовании, так лёгок и необычайно удобен в использовании в городе. Если вы обожаете быть в тренде и отвечать своим собственным технологическим потребностям, тогда самокат это то, что вам нужно. Обратите внимание на изготовителей Razor и Xiaomi: они предлагают широкий выбор моделей, подходящих для любого типа поверхности, больше скорости и ощущения комфорта, особенно в предстоящие летние месяцы. В общем, для тех кто ищет средство передвижения, чтобы быстро перемещаться по городу, самокат - лучшее решение."',
         CURRENT_TIMESTAMP());
 INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (8, 2, 'Title 8',
-        '"Мы говорили о том, как Spring Security помогает защитить веб-приложения на платформе Spring от различных видов атак. Мы также обсудили формат HAL, который упрощает работу с RESTful API. Если вы планируете создавать веб-приложение на Spring или использовать RESTful API, эти инструменты могут быть очень полезны."',
+VALUES (8, 2, 'Новый телефон',
+        '"Хей всем! Сегодня хочу поделиться своим мнением о новом телефоне, который стал для меня отличным помощником в повседневной жизни. В плане функциональности и производительности он просто невероятен. Речь идет о новом iPhone или Samsung (выберите свой любимый). Эти мобильные устройства оснащены передовыми технологиями, высококачественным экраном и мощной батареей, так что вы можете вечно оставаться онлайн. И что самое крутое - имеют невероятную камеру, которая позволяет сделать потрясающие фото! Так что, если вы любите быть в курсе последних новинок инноваций и улучшенных функций, ..."',
         CURRENT_TIMESTAMP());
-INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (9, 2, 'Title 9',
-        '"Мы говорили о том, как Spring Security помогает защитить веб-приложения на платформе Spring от различных видов атак. Мы также обсудили формат HAL, который упрощает работу с RESTful API. Если вы планируете создавать веб-приложение на Spring или использовать RESTful API, эти инструменты могут быть очень полезны."',
-        CURRENT_TIMESTAMP());
-INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (10, 2, 'Title 10',
-        '"Мы говорили о том, как Spring Security помогает защитить веб-приложения на платформе Spring от различных видов атак. Мы также обсудили формат HAL, который упрощает работу с RESTful API. Если вы планируете создавать веб-приложение на Spring или использовать RESTful API, эти инструменты могут быть очень полезны."',
-        CURRENT_TIMESTAMP());
-INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (11, 3, '5 преимуществ использования Spring Security для обеспечения безопасности веб-приложений',
-        '"Spring Security является одним из наиболее популярных инструментов для обеспечения безопасности веб-приложений на платформе Spring. Это мощный инструмент, который предоставляет ряд функций безопасности, таких как аутентификация, авторизация и управление сеансами.
-В этой статье мы рассмотрим 5 преимуществ использования Spring Security для обеспечения безопасности веб-приложений:"',
-        CURRENT_TIMESTAMP());
-INSERT INTO POST (post_id, user_id, title, body, create_date)
-VALUES (12, 3, 'Заголовок 12',
-        '"Мы говорили о том, как Spring Security помогает защитить веб-приложения на платформе Spring от различных видов атак. Мы также обсудили формат HAL, который упрощает работу с RESTful API. Если вы планируете создавать веб-приложение на Spring или использовать RESTful API, эти инструменты могут быть очень полезны."',
-        CURRENT_TIMESTAMP());
+
+
 
 -- Comments
 INSERT INTO COMMENT (post_id, user_id, body, create_date)
 VALUES (1, 1,
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+        '"Прикольно"',
         CURRENT_TIMESTAMP());
 INSERT INTO COMMENT (post_id, user_id, body, create_date)
 VALUES (1, 2,
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+        '"Как же я мечтаю путешевствовать!"',
         CURRENT_TIMESTAMP());
 INSERT INTO COMMENT (post_id, user_id, body, create_date)
-VALUES (1, 3,
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+VALUES (2, 3,
+        '"Это было интересно"',
         CURRENT_TIMESTAMP());
 INSERT INTO COMMENT (post_id, user_id, body, create_date)
-VALUES (6, 1,
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+VALUES (3, 1,
+        '"Прикольно"',
         CURRENT_TIMESTAMP());
 INSERT INTO COMMENT (post_id, user_id, body, create_date)
 VALUES (6, 2,
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+        '"Интересно"',
         CURRENT_TIMESTAMP());
 INSERT INTO COMMENT (post_id, user_id, body, create_date)
 VALUES (6, 3,
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+        '"Круто!"',
         CURRENT_TIMESTAMP());
