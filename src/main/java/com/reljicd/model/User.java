@@ -18,27 +18,27 @@ public class User {
     private Long id;
 
     @Column(name = "email", unique = true, nullable = false)
-    @Email(message = "*Please provide a valid Email")
-    @NotEmpty(message = "*Please provide an email")
+    @Email(message = "*Пожалуйста, укажите действительный адрес электронной почты")
+    @NotEmpty(message = "*Пожалуйста, укажите адрес электронной почты")
     private String email;
 
     @Column(name = "password", nullable = false)
-    @Length(min = 5, message = "*Your password must have at least 5 characters")
-    @NotEmpty(message = "*Please provide your password")
+    @Length(min = 5, message = "*Ваш пароль должен содержать не менее 5 символов")
+    @NotEmpty(message = "*Пожалуйста, укажите свой пароль")
     @JsonIgnore
     private String password;
 
     @Column(name = "username", nullable = false, unique = true)
-    @Length(min = 5, message = "*Your username must have at least 5 characters")
-    @NotEmpty(message = "*Please provide your name")
+    @Length(min = 5, message = "*Ваше имя пользователя должно содержать не менее 5 символов")
+    @NotEmpty(message = "*Пожалуйста, укажите свое имя")
     private String username;
 
     @Column(name = "name")
-    @NotEmpty(message = "*Please provide your name")
+    @NotEmpty(message = "*Пожалуйста, укажите свое имя")
     private String name;
 
     @Column(name = "last_name")
-    @NotEmpty(message = "*Please provide your last name")
+    @NotEmpty(message = "*Пожалуйста, укажите свою фамилию")
     private String lastName;
 
     @Column(name = "active", nullable = false)

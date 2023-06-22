@@ -2,18 +2,22 @@ ALTER TABLE POST
   ALTER COLUMN create_date SET DEFAULT CURRENT_TIMESTAMP;
 
 -- Users
--- password in plaintext: "password"
+
 INSERT INTO USER (user_id, password, email, username, name, last_name, active)
 VALUES
   (1, '$2a$06$OAPObzhRdRXBCbk7Hj/ot.jY3zPwR8n7/mfLtKIgTzdJa4.6TwsIm', 'user@mail.com', 'user', 'Name', 'Surname',
    1);
--- password in plaintext: "password"
+
 INSERT INTO USER (user_id, password, email, username, name, last_name, active)
 VALUES
   (2, '$2a$06$OAPObzhRdRXBCbk7Hj/ot.jY3zPwR8n7/mfLtKIgTzdJa4.6TwsIm', 'qwvqwe@gmail.com', 'Rast', 'Sanya', 'Petrov', 1);
--- password in plaintext: "password"
+
 INSERT INTO USER (user_id, password, email, username, name, last_name, active)
 VALUES (3, '$2a$06$OAPObzhRdRXBCbk7Hj/ot.jY3zPwR8n7/mfLtKIgTzdJa4.6TwsIm', 'vewevv@mail.com', 'balabolka', 'ewewew', 'uuutut', 1);
+
+INSERT INTO USER (user_id, password, email, username, name, last_name, active)
+VALUES (4, '$2a$06$OAPObzhRdRXBCbk7Hj/ot.jY3zPwR8n7/mfLtKIgTzdJa4.6TwsIm', 've21wevv@mail.com', 'Tester', 'ewewew', 'uuutut', 1);
+
 
 -- Roles
 INSERT INTO ROLE (role_id, role)
