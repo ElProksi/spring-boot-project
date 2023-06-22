@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+    <div th:replace="/fragments/header :: header-css"/>
+</head>
+<body>
+<div class="wrapper">
+<div th:replace="/fragments/header :: header"/>
+
+
+<h1>User List</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+        <td th:text="${user.name}"></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.firstName}"></td>
+        <td th:text="${user.lastName}"></td>
+        <td th:text="${user.email}"></td>
+        <td><a th:href="@{/users/edit/{id}(id=${user.id})}">Edit</a></td>
+        <td><a th:href="@{/users/delete/{id}(id=${user.id})}" onclick="return confirm('Вы уверены?')">Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+<div th:object="${user}">
+    <form th:action="@{/users/save}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" th:field="*{firstName}"/>
+        </div>
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" th:field="*{lastName}"/>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" th:field="*{email}"/>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</div>
+<a href="/users/edit/new">Add New User</a>
+</div>
+</body>
+</html>

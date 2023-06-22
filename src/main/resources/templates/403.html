@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="/fragments/header :: header-css"/>
+</head>
+<body>
+<div class="wrapper">
+<div th:replace="/fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>403 - Доступ запрещен</h1>
+        <div th:inline="text">Извини '[[${#httpServletRequest.remoteUser}]]', но у тебя нет прав на посещение этой страницы.</div>
+    </div>
+
+</div>
+
+<!-- /.container -->
+
+<div th:replace="/fragments/footer :: footer"/>
+</div>
+</body>
+</html>
